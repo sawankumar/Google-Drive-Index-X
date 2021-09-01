@@ -126,7 +126,7 @@ const unauthorized = `<html>
 <head><title>401 Unauthorized</title></head>
 <body>
 <center><h1>401 Unauthorized</h1></center>
-<hr><center>BhadooDriveIndex/${uiConfig.version}</center>
+<hr><center>GoogleDriveIndex/${uiConfig.version}</center>
 <hr><center>Please contact <a href="${uiConfig.unauthorized_owner_link}">Site Owner</a> at ${uiConfig.unauthorized_owner_email}</center>
 </body>
 </html>`
