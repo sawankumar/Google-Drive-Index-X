@@ -191,6 +191,5 @@ const uiConfig = {
 
 * Source: [maple3142](https://github.com/maple3142/GDIndex)
 * Source: [yanzai](https://github.com/yanzai/goindex)
-* Source: [yanzai](https://github.com/yanzai/goindex)
-* Source: Parveen Bhadoo
+* Source: [Parveen Bhadoo](https://gitlab.com/ParveenBhadooOfficial/Google-Drive-Index)
 * Design: [Bootstrap](https://getbootstrap.com)
