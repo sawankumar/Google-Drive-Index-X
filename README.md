@@ -12,14 +12,12 @@ This project uses Google Drive API to Index Files and Folders.
           "id": "root",
           "name": "Drive One",
           "protect_file_link": false,
-         // "auth": {"username":"password"} /* Remove double slash before "auth" to activate id password protection */
+         // "auth": {"username":"password"}
       },
     ]};
 ````
 
 ## Multiple ID Config
-
-* Add this code for each drive. see cloud flare workers code for more info. (requires common sense)
 
 ````
     "roots":[
@@ -27,13 +25,13 @@ This project uses Google Drive API to Index Files and Folders.
           "id": "root",
           "name": "Drive One",
           "protect_file_link": false,
-         // "auth": {"username":"password"} /* Remove double slash before "auth" to activate id password protection */
+         // "auth": {"username":"password"}
       },
       {
           "id": "root",
           "name": "Drive Two",
           "protect_file_link": false,
-         // "auth": {"username":"password", "username1":"password1"} /* Remove double slash before "auth" to activate id password protection */
+         // "auth": {"username":"password", "username1":"password1"}
       },
     ]};
 ````
@@ -49,17 +47,17 @@ This project uses Google Drive API to Index Files and Folders.
 * For single user
 
 ````
-            // "auth": {"username":"password"} /** remove double slash at starting of this line to use password. */
+            // "auth": {"username":"password"}
 ````
 
-* For multiple users (unlimited users)
+* For multiple users
 
 ````
       {
           "id": "",
           "name": "Drive Two",
           "protect_file_link": false,
-          // "auth": { "user1":"pass1", "user2":"pass2", }  /** remove double slash at starting of this line to use password. */
+          // "auth": { "user1":"pass1", "user2":"pass2", }
       },
 ````
 
@@ -72,7 +70,7 @@ This project uses Google Drive API to Index Files and Folders.
 * Add a .password file your required password in your folder which you want to protect, each folder should have its own .password file.
 * The password is stored inside the Google Drive Folder, not the index and the .password file is hidden an cannot be accessed using Index.
 
-## Brand Customization
+## Customization
 
 ````
 const uiConfig = {
@@ -103,7 +101,7 @@ const uiConfig = {
   "file_view_alert_class": "alert alert-danger", // https://getbootstrap.com/docs/4.0/components/alerts/#examples
   "file_count_alert_class": "alert alert-secondary", // https://getbootstrap.com/docs/4.0/components/alerts/#examples
   "contact_link": "", // Link to Contact Button on Menu
-  "copyright_year": "2021, // year of copyright, can be anything like 2015 - 2020 or just 2020
+  "copyright_year": "2021", // year of copyright, can be anything like 2015 - 2020 or just 2020
   "company_name": "", // Name next to copyright
   "company_link": "", // link of copyright name
   "credit": true, // Set this to true to give us credit
@@ -130,10 +128,10 @@ const uiConfig = {
 ````
 ## Second Domain Systems
 
-* set second_domain_for_dl to `true` first.
-* set downloaddomain to ur new index you're going to make below.
-* then make separate index on different cloudflare account with worker-beta-second-domain.js code.
-* change only refresh_token or SA and Drive IDs, don't touch anything else.
+* Set second_domain_for_dl to `true` first.
+* Set downloaddomain to ur new index you're going to make below.
+* Then make separate index on different cloudflare account with worker-beta-second-domain.js code.
+* Change only refresh_token or SA and Drive IDs, don't touch anything else.
 * It's done.
 
 ## Themes
@@ -161,7 +159,7 @@ const uiConfig = {
 
 ## Sorting by Name or Modified Time
 
-* Find `params.orderBy` in workers code L623 and L710.
+* Find `params.orderBy` in workers code.
 * use `params.orderBy = 'folder,name,modifiedTime desc';` to sort by File and Folder Name.
 * use `params.orderBy = 'folder,modifiedTime desc,name';` to sort by Modified Time.
 * A comma-separated list of sort keys. Valid keys are 'createdTime', 'folder', 'modifiedByMeTime', 'modifiedTime', 'name', 'name_natural', 'quotaBytesUsed', 'recency', 'sharedWithMeTime', 'starred', and 'viewedByMeTime'. Each key sorts ascending by default, but may be reversed with the 'desc' modifier. Example usage: ?orderBy=folder,modifiedTime desc,name. Please note that there is a current limitation for users with approximately one million files in which the requested sort order is ignored.
