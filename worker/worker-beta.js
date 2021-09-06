@@ -1,7 +1,7 @@
 const serviceaccounts = [
 {}
 ];
-const randomserviceaccount = serviceaccounts[Math.floor(Math.random()*serviceaccounts.length)]; // DO NOT TOUCH THIS
+const randomserviceaccount = serviceaccounts[Math.floor(Math.random()*serviceaccounts.length)];
 const domains_for_dl = ['']; // add multiple cloudflare addresses to balance the load on download/stream servers, eg. ['https://testing.fetchgoogleapi.workers.dev', 'https://testing2.fetchgoogleapi2.workers.dev']
 const domain_for_dl = domains_for_dl[Math.floor(Math.random()*domains_for_dl.length)]; // DO NOT TOUCH THIS
 const blocked_region = ['']; // add regional codes seperated by comma, eg. ['IN', 'US', 'PK']
@@ -27,7 +27,7 @@ const authConfig = {
 
 const uiConfig = {
     "theme": "zephyr", // switch between themes
-    "version": "0.1", 
+    "version": "", 
     // If you're using Image then set to true, If you want text then set it to false
     "logo_image": false, // true if you're using image link in next option.
     "logo_height": "", // only if logo_image is true
@@ -65,8 +65,8 @@ const uiConfig = {
     "disable_video_download": false, // Remove Download, Copy Button on Videos
     "second_domain_for_dl": false, // If you want to display other URL for Downloading to protect your main domain.
     "downloaddomain": domain_for_dl, // Ignore this and set domains at top of this page after service accounts.
-    "poster": "https://cdn.jsdelivr.net/gh/sawankumar/Google-Drive-Index-X@0.1/images/poster.jpg", // Video poster URL or see Readme to how to load from Drive
-    "audioposter": "https://cdn.jsdelivr.net/gh/sawankumar/Google-Drive-Index-X@0.1/images/music.jpg", // Video poster URL or see Readme to how to load from Drive
+    "poster": "https://cdn.jsdelivr.net/gh/sawankumar/Google-Drive-Index-X@master/images/poster.jpg", // Video poster URL or see Readme to how to load from Drive
+    "audioposter": "https://cdn.jsdelivr.net/gh/sawankumar/Google-Drive-Index-X@master/images/music.jpg", // Video poster URL or see Readme to how to load from Drive
     "jsdelivr_cdn_src": "https://cdn.jsdelivr.net/gh/sawankumar/Google-Drive-Index-X", // If Project is Forked, then enter your GitHub repo
     "render_head_md": true, // Render Head.md
     "render_readme_md": true, // Render Readme.md
@@ -101,7 +101,7 @@ function html(current_drive_order = 0, model = {}) {
   <link rel="stylesheet" href="https://cdn.plyr.io/${uiConfig.plyr_io_version}/plyr.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.0.0/dist/${uiConfig.theme}/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
   <style>a{color:${uiConfig.css_a_tag_color};}p{color:${uiConfig.css_p_tag_color};}</style>
-  <script src="${uiConfig.jsdelivr_cdn_src}@${uiConfig.version}/js/app.obf.min.js"></script>
+  <script src="${uiConfig.jsdelivr_cdn_src}@${uiConfig.version}/js/app.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/mozilla/pdf.js@gh-pages/build/pdf.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
