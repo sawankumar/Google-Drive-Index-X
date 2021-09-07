@@ -39,7 +39,7 @@ const uiConfig = {
     "header_padding": "60", // Value 60 for fixed header, Value 20 for flexible header. Required to be changed accordingly in some themes.
     "nav_link_1": "Home", // change navigation link name
     "nav_link_3": "Path", // change navigation link name
-    "nav_link_4": "Contact", // change navigation link name
+    "nav_link_4": "GitHub", // change navigation link name
     "fixed_footer": false, // If you want the footer to be flexible or fixed.
     "hide_footer": true, // hides the footer from site entirely.
     "header_style_class": "navbar-dark bg-primary", // navbar-dark bg-primary || navbar-dark bg-dark || navbar-light bg-light
@@ -52,7 +52,7 @@ const uiConfig = {
     "path_nav_alert_class": "alert alert-primary", // https://getbootstrap.com/docs/4.0/components/alerts/#examples
     "file_view_alert_class": "alert alert-danger", // https://getbootstrap.com/docs/4.0/components/alerts/#examples
     "file_count_alert_class": "alert alert-secondary", // https://getbootstrap.com/docs/4.0/components/alerts/#examples
-    "contact_link": "", // Link to Contact Button on Menu
+    "contact_link": "https://github.com/sawankumar/Google-Drive-Index-X", // Link to Contact Button on Menu
     "copyright_year": "2021", // year of copyright, can be anything like 2015 - 2020 or just 2020
     "company_name": "Google Drive Index", // Name next to copyright
     "company_link": "", // link of copyright name
