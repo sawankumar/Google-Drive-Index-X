@@ -130,7 +130,7 @@ const uiConfig = {
 
 * Set second_domain_for_dl to `true` first.
 * Set downloaddomain to ur new index you're going to make below.
-* Then make separate index on different cloudflare account with worker-beta-second-domain.js code.
+* Then make separate index on different cloudflare account with worker-second-domain.js code.
 * Change only refresh_token or SA and Drive IDs, don't touch anything else.
 * It's done.
 
